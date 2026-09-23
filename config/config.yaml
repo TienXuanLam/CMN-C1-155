@@ -1,0 +1,20 @@
+# Runtime configuration for ClassificationAgent (CMN-C1-155)
+# Loaded by src/api/server.py and passed to Graph(config=...).
+
+max_retry: 3
+timeout_seconds: 30
+llm_model: "claude-3-5-haiku-latest"
+confidence_threshold: 0.5
+memory_enabled: false
+hitl:
+  enabled: false
+
+# Capability registry — entries loaded by CapabilityLookupNode at runtime.
+# Add real agent entries per deployment.
+capabilities:
+  - agent_id: "EXAMPLE-C1-001"
+    name: "ExampleAgent"
+    domains:
+      - general
+    description: "Placeholder capability entry"
+    priority: 1

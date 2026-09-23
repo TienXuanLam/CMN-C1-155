@@ -1,0 +1,16 @@
+id: CMN-C1-155
+name: cmn-c1-155
+namespace: cmn
+version: "1.1.0"
+description: "Agent capability registry and request-routing classification agent."
+enabled: true
+category: "Cat 1"
+generation_mode: "llm"
+industry: CMN
+base_type: AgentBaseGraph
+class: "src.graph.graph.Graph"
+required_trust_level: "VERIFIED_EXTERNAL"
+
+requires:
+  secrets: [AZURE_OPENAI_API_KEY, AZURE_OPENAI_ENDPOINT, AZURE_OPENAI_DEPLOYMENT]
+  extras: [openai]
